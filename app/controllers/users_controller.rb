@@ -1,14 +1,5 @@
 class UsersController < ApplicationController
 
-  # GET /users
-  def index
-    @users = User.all
-  end
-
-  # GET /users/1
-  def show
-  end
-
   # GET /users/new
   def new
     @user = User.new
@@ -17,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user, notice: 'User successfully created'
+      redirect_to root_path, notice: 'User successfully created'
     else
       render :new
     end

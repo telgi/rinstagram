@@ -11,14 +11,19 @@ RSpec.feature "User Management" do
     end
 
     scenario "User can login to their profile if username and password is correct" do
-      create_good_new_user
-      expect(page).to have_content("User successfully created")
+      user_logs_in
+      expect(page).to have_content("Logged in as CoolDude12")
     end
 
     scenario "User can logout of their profile" do
       user_logs_in
       click_link "Log Out"
       expect(page).to have_content("Logged out successfully")
+    end
+
+    scenario "User can't login if they are already logged in" do
+      user_logs_in
+      expect(page).not_to have_content("Log In")
     end
 
   end

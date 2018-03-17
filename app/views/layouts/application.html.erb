@@ -6,15 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <h1>Rinstagram</h1>
+    <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
+    <% if current_user %>
+      Logged in as <%= current_user.username %><br>
+      <%= link_to 'Log Out', :logout %>
+    <% else %>
+      <%= link_to 'Log In', :login %> |
+      <%= link_to 'Sign Up', :signup %>
+    <% end %>
   </head>
 
   <body>
-    <p id="notice"><%= notice %></p>
-    <p id="alert"><%= alert %></p>
-
-    <%= link_to 'Log In', :login %> |
-    <%= link_to 'Log Out', :logout %> |
-    <%= link_to 'Sign Up', :signup %>
     <%= yield %>
   </body>
 </html>
