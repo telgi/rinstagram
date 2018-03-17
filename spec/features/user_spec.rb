@@ -9,10 +9,13 @@ RSpec.feature "User" do
 
   scenario "User can login to their profile" do
     create_new_user
-    click_link "Log In"
-    fill_in('username', with: 'CoolDude12')
-    fill_in('password', with: 'tubular')
-    click_button "Log In"
+    user_logs_in
     expect(page).to have_content("Logged in successfully")
+  end
+
+  scenario "User can logout of their profile" do
+    user_logs_in
+    click_link "Log Out"
+    expect(page).to have_content("Logged out successfully")
   end
 end
