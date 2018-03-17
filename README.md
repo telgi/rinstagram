@@ -49,9 +49,9 @@ So that I can get a sense of how popular my picture is.
 
 1) User:
 
-  * User can sign up
-  * User can login
-  * User can logout
+  * User can sign up [x]
+  * User can login [x]
+  * User can logout [x]
 
 2) Post:
 

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  # GET /users/1
   def show
   end
 
@@ -15,8 +16,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
-    redirect_to @user, notice: 'User successfully created'
+    if @user.save
+      redirect_to @user, notice: 'User successfully created'
+    else
+      render :new
+    end
   end
 
   private
