@@ -16,7 +16,9 @@ Navigate to `http://localhost:3000/`
 
 ## Running tests
 
-`rspec`
+For feature tests, tested with Capybara:
+
+`rspec spec/features`
 
 ## User Stories
 

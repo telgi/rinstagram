@@ -8,6 +8,6 @@ RSpec.feature "User" do
     fill_in('user[password]', with: 'tubular')
     fill_in('user[password_confirmation]', with: 'tubular')
     click_button "Create User"
-    expect(page).to have_content("User successfully created.")
+    expect(page).to have_content("User successfully created")
   end
 end
