@@ -1,0 +1,13 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <%= render 'error_list', object: post %>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption, id: :post_caption %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

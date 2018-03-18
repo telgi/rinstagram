@@ -18,7 +18,7 @@ Navigate to `http://localhost:3000/`
 
 For feature tests, tested with Capybara:
 
-`rspec spec/features`
+`rspec spec/features -fd`
 
 ## User Stories
 
@@ -49,6 +49,8 @@ So that I can get a sense of how popular my picture is.
 
 1) User:
 
+  * User has a username [x]
+  * User has a password [x]
   * User can sign up [x]
   * User can login [x]
   * User can logout [x]
@@ -58,6 +60,7 @@ So that I can get a sense of how popular my picture is.
   * Post has a caption
   * Post has a picture
   * Post belongs to User / User has many posts
+  * User can create their own posts
   * User can see their own posts
   * User can edit their own posts
   * User can delete their own posts
