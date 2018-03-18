@@ -12,11 +12,11 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.caption %></td>
-        <td><%= post.user %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <p><strong><%= link_to post.user %></strong></p>
+        <p><%= link_to image_tag(post.image), post %></p>
+        <p><%= post.caption %></p>
+        <p><%= link_to 'Edit', edit_post_path(post) %></p>
+        <p><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </tr>
     <% end %>
   </tbody>
