@@ -6,7 +6,7 @@ RSpec.feature "User Management" do
   context "Happy Path" do
 
     scenario "User can sign up to create a profile" do
-      create_good_new_user
+      create_new_user
       expect(page).to have_content("User successfully created")
     end
 
@@ -31,13 +31,18 @@ RSpec.feature "User Management" do
   context "Unhappy Path" do
 
     scenario "User needs to provide a username with at least 5 characters to signup" do
-      create_bad_new_user
+      visit '/'
+      click_link "Sign Up"
+      fill_in('user[username]', with: 'Dude')
+      fill_in('user[password]', with: 'kl')
+      fill_in('user[password_confirmation]', with: 'kl')
+      click_button "Create User"
       expect(page).to have_content("Username is too short (minimum is 5 characters)")
     end
 
     scenario "User needs to provide a unique username to signup successfully" do
-      create_good_new_user
-      create_good_new_user
+      create_new_user
+      create_new_user
       expect(page).not_to have_content("User successfully created")
     end
 
@@ -51,7 +56,7 @@ RSpec.feature "User Management" do
     end
 
     scenario "User can't login to their profile if password is not correct" do
-      create_good_new_user
+      create_new_user
       click_link "Log In"
       fill_in('username', with: 'CoolDude12')
       fill_in('password', with: 'radical')

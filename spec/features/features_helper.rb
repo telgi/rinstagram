@@ -1,4 +1,4 @@
-def create_good_new_user
+def create_new_user
   visit '/'
   click_link "Sign Up"
   fill_in('user[username]', with: 'CoolDude12')
@@ -7,17 +7,8 @@ def create_good_new_user
   click_button "Create User"
 end
 
-def create_bad_new_user
-  visit '/'
-  click_link "Sign Up"
-  fill_in('user[username]', with: 'Dude')
-  fill_in('user[password]', with: 'kl')
-  fill_in('user[password_confirmation]', with: 'kl')
-  click_button "Create User"
-end
-
 def user_logs_in
-  create_good_new_user
+  create_new_user
   click_link "Log In"
   fill_in('username', with: 'CoolDude12')
   fill_in('password', with: 'tubular')
