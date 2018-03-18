@@ -18,6 +18,7 @@ end
 def user_creates_post
   user_logs_in
   click_link "New Post"
+  attach_file('post[image]', "#{Rails.root}/spec/features/waves.jpg")
   fill_in('post[caption]', with: "Check out these gnarly waves")
   click_button "Create Post"
 end

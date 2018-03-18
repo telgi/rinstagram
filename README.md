@@ -58,7 +58,7 @@ So that I can get a sense of how popular my picture is.
 2) Post:
 
   * Post has a caption [x]
-  * Post has a picture
+  * Post has a picture [x]
   * Post belongs to User / User has many posts [x]
   * User can create posts [x]
   * User can click onto an individual post [x]

@@ -31,13 +31,13 @@ RSpec.feature "Post Management" do
 
   context "Unhappy Path" do
 
-    scenario "User cannot create a post with no caption" do
+    scenario "User cannot create a post without a picture" do
       user_logs_in
       click_link "New Post"
-      fill_in('post[caption]', with: "")
+      fill_in('post[caption]', with: "Check out these gnarly waves")
       click_button "Create Post"
       expect(page).not_to have_content("Picture posted successfully")
-      expect(page).to have_content("Caption can't be blank")
+      expect(page).to have_content("Image can't be blank")
     end
 
   end
