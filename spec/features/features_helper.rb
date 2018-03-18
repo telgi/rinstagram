@@ -23,3 +23,10 @@ def user_logs_in
   fill_in('password', with: 'tubular')
   click_button "Log In"
 end
+
+def user_creates_post
+  user_logs_in
+  click_link "New Post"
+  fill_in('post[caption]', with: "Check out these gnarly waves")
+  click_button "Create Post"
+end

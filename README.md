@@ -57,11 +57,11 @@ So that I can get a sense of how popular my picture is.
 
 2) Post:
 
-  * Post has a caption
+  * Post has a caption [x]
   * Post has a picture
-  * Post belongs to User / User has many posts
-  * User can create their own posts
-  * User can see their own posts
+  * Post belongs to User / User has many posts [x]
+  * User can create their own posts [x]
+  * User can see their own posts [x]
   * User can edit their own posts
   * User can delete their own posts
   * User can see all posts from other users
