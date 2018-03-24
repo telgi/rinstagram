@@ -1,6 +1,12 @@
 # Rinstagram
 
-A social network application where users post photos and see other posted photos via a shared newsfeed.
+Rails application that allows users to post photos to their friends and see
+what their friends have posted via a shared newsfeed.
+
+## Aim of Learning
+
+To build a Rails application from the ground up without scaffolding to truly learn
+what mystical sorcery Rails is performing under the hood.
 
 ## Installation
 
@@ -14,7 +20,7 @@ A social network application where users post photos and see other posted photos
 
 Navigate to `http://localhost:3000/`
 
-## Running tests
+## Running Tests
 
 For feature tests, tested with Capybara:
 
@@ -47,7 +53,7 @@ So that I can get a sense of how popular my picture is.
 
 ### MVP
 
-1) User:
+1) **User**:
 
   * User has a username [x]
   * User has a password [x]
@@ -55,7 +61,7 @@ So that I can get a sense of how popular my picture is.
   * User can login [x]
   * User can logout [x]
 
-2) Post:
+2) **Post**:
 
   * Post has a caption [x]
   * Post has a picture [x]
@@ -68,7 +74,7 @@ So that I can get a sense of how popular my picture is.
 
 ### Version 2.0
 
-3) Comment:
+3) **Comment**:
 
   * Comment has a text area
   * Comment belongs to Post / Post has many comments
@@ -77,7 +83,7 @@ So that I can get a sense of how popular my picture is.
   * User can edit their own comments
   * User can delete their own comments
 
-4) Like:
+4) **Like**:
 
   * Like has a boolean data type
   * Like belongs to Post
